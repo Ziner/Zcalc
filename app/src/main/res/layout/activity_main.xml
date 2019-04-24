@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#080808"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/grid_calc">
+        <EditText
+            android:id="@+id/Formula"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#080808"
+            android:layout_weight="1"
+
+            android:focusable="false"
+            android:longClickable="false"
+            android:cursorVisible="false"
+
+            android:textSize="30sp"
+            android:textColor="#ededed"
+            android:gravity="right|center"
+            android:textColorLink="#618c87" />
+
+        <TextView
+            android:id="@+id/Result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#080808"
+            android:layout_weight="1"
+
+            android:focusable="false"
+            android:longClickable="false"
+            android:cursorVisible="false"
+
+            android:textSize="30sp"
+            android:textColor="#B0EDEDED"
+            android:textColorLink="#618c87"
+            android:gravity="right|center"
+            tools:ignore="TextViewEdits" />
+    </LinearLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/grid_calc"
+        app:columnCount="4"
+        app:rowCount="5"
+        style="@style/Face" >
+
+
+        <Button
+            android:onClick="Delete"
+            android:text="@string/del"
+            style="@style/ButStyleRed" />
+
+        <Button
+            android:onClick="Parentheses"
+            android:text="@string/parentheses"
+            style="@style/ButStyleGreenGradient" />
+
+        <Button
+            android:onClick="Percent"
+            android:text="@string/percent"
+            style="@style/ButStyleGreenGradient" />
+
+        <Button
+            android:onClick="Slash"
+            android:text="@string/slash"
+            style="@style/ButStyleGreenGradient" />
+
+        <Button
+            android:onClick="Seven"
+            android:text="@string/seven"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Eight"
+            android:text="@string/eight"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Nine"
+            android:text="@string/nine"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:text="@string/star"
+            android:onClick="Star"
+            style="@style/ButStyleGreen" />
+
+        <Button
+            android:onClick="Four"
+            android:text="@string/four"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Five"
+            android:text="@string/five"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Six"
+            android:text="@string/six"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Minus"
+            android:text="@string/minus"
+            style="@style/ButStyleGreen" />
+
+        <Button
+            android:onClick="One"
+            android:text="@string/one"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Two"
+            android:text="@string/two"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Three"
+            android:text="@string/three"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Plus"
+            android:text="@string/plus"
+            style="@style/ButStyleGreen" />
+
+        <Button
+            android:onClick="Plus_minus"
+            android:text="@string/plus_minus"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Zero"
+            android:text="@string/zero"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Comma"
+            android:text="@string/comma"
+            style="@style/ButStyleWhite" />
+
+        <Button
+            android:onClick="Calculate"
+            android:text="@string/equally"
+            style="@style/ButStyleBlue" />
+
+    </android.support.v7.widget.GridLayout>
+</RelativeLayout>
