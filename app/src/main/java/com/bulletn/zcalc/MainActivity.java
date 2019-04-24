@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     // Функция для перевода строки в числовой тип
     private Integer stringToInt(String string) {
         // возвращает число из строки
