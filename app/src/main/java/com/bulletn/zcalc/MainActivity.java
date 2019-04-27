@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import java.util.Objects;
 
 import de.congrace.exp4j.Calculable;
@@ -56,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         formula.setText(String.valueOf(result));                   // Перемещаем ответ в поле формулы
     }
-
-
 
 
     ////////////// Очистка //////////////
@@ -164,19 +163,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (value.isEmpty())                                         // Проверяем не пустая ли строка
         {
-            formula.setText(getValue("(-"));                  // Если пустая - добавляем скобку со знаком минус
-        } else                                                       // Если не пустая, то выполняем следующую проверку
-        {
-            if (value == "(-")                                       // Если поле равно "(-"
-            {
-                value = "";                                          // Присваиваем полю пустое значение
-            } else                                                   // Если не равно "(-"
-            {
-                return;                                              // return;
-            }
+            formula.setText("(-");                  // Если пустая - добавляем скобку со знаком минус
+        } else if (value.equals("(-")) {                                   // Если поле равно "(-"
+            formula.setText("");                                          // Присваиваем полю пустое значение
+        } else {                                                   // Если не равно "(-"
+            // return;
         }
     }
-
 
 
     // Функция для перевода строки в числовой тип
